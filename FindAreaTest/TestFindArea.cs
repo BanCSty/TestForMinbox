@@ -41,7 +41,7 @@ namespace FindAreaTest
             try
             {
                 IArea abs = new Triangle("3", 0, 5);
-                Assert.Fail("An exception should have been thrown"); //Закоментируйте это строку и все будет OK
+                Assert.Fail("An exception should have been thrown"); //Comment this line and everything will be OK
             }
             catch (ArgumentOutOfRangeException range)
             {
