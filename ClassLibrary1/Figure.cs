@@ -2,10 +2,10 @@
 
 namespace FindArea.FigureS
 {
-    //Класс-интерфейс для поиска площади неопределённых фигур
+    //Class-interface for the find [area] abstract-figure 
     public class Figure : IDisposable
     {
-        //Агрегация... Solution/Solution items/Extended.txt
+        //Aggregation... Solution/Solution items/Extended.txt
         IArea area;
 
         //Circle
@@ -25,7 +25,8 @@ namespace FindArea.FigureS
             {
                 area = new Square(a, b);
             }
-            else throw new ArgumentException("Это не квадрат"); //Здесь можно передать вызов другому ctor
+            //You can complicate the implementation
+            else throw new ArgumentException("Это не квадрат"); 
         }
 
         public double Result()

@@ -29,7 +29,7 @@ namespace FindArea.FigureS
         }
 
         //Хоть рихтер и против, но...
-        //Передаваемое значение должно быть больше нуля, я так думаю...
+        //Value must be more then zero, i think so...
         public double Value { get { return _value;} 
             set {
                 if (value <= 0)
@@ -43,7 +43,6 @@ namespace FindArea.FigureS
             GC.SuppressFinalize(this);
         }
 
-        //Функция получения площади 
         public double GetArea()
         {
             return (_value * _value * Math.PI);

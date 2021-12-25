@@ -10,22 +10,5 @@ namespace FindArea.FigureS
     {
         public double GetArea();
     }
-    /*
-    public interface IName
-    {
-        public string GetName();
-    }
 
-    //Test
-    public interface ivalue
-    {
-        public double getvalue();
-    }
-
-    public interface IFigure
-    {
-        IArea GetArea();
-        IName GetName();
-    }
-    */
 }

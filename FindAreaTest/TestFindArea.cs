@@ -34,7 +34,7 @@ namespace FindAreaTest
             }
         }
 
-        //Тестирование заведомо провалится - https://qastack.ru/programming/741029/best-way-to-test-exceptions-with-assert-to-ensure-they-will-be-thrown
+        //Testing will be fail - https://qastack.ru/programming/741029/best-way-to-test-exceptions-with-assert-to-ensure-they-will-be-thrown
         [TestMethod]
         public void TriangleArea_3_0_5__FAILreturned()
         {
@@ -47,7 +47,7 @@ namespace FindAreaTest
             {
                 Assert.AreEqual("Input string was not in a correct format.", range.Message);
             }
-            //Для отлавливание более deep-error 
+            //For the find deep-error 
             catch (Exception e)
             {
                 Assert.Fail(

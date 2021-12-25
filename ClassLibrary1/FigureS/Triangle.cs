@@ -16,7 +16,7 @@ namespace FindArea.FigureS
         {
             try
             {
-                _a = Convert.ToDouble(a); //Просто для проверки, возможно вдальнейшем придётся принимать строку из FORMS
+                _a = Convert.ToDouble(a); //Only for the check
                 //_a = a;
                 _b = b;
                 _c = c;
@@ -62,11 +62,11 @@ namespace FindArea.FigureS
         public bool IsRectengular()
         {
             /*
-             Если выполняется теорема Пифагора: 
-             с²=a²+b² , где с - наибольшая сторона, а и b две других, – треугольник прямоугольный. 
+             If performed Pifagor teorem: 
+             с²=a²+b² , where c - max side, а and b the two other, – triangle is rectangular. 
              */
             double mx;
-            //Поиск наибольшей стороны
+            //Find max side
             mx = _a;
             if (_b > mx) mx = _b;
             if (_c > mx) mx = _c;
