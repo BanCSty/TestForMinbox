@@ -2,6 +2,5 @@
 {
     public interface Iarea_IisRectengular : IArea, IisRectengular
     {
-
     }
 }
