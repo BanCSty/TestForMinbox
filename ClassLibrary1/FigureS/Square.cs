@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FindArea.FigureS.Interfaces;
 
 namespace FindArea.FigureS
 {
-    class Square : IArea, IDisposable
+    class Square : IDisposable, Iarea_IisRectengular
     {
         private double _a;
         private double _b;
@@ -57,6 +54,11 @@ namespace FindArea.FigureS
         public double GetArea()
         {
             return _a * _b;
+        }
+
+        public bool IsRectengular()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -69,7 +69,9 @@ namespace FindAreaTest
         public void abstractFigure_4_5_3__6retrun()
         {
             Figure triangle = new Figure("4", 5, 3);
-            Assert.AreEqual(triangle.Result(), 6);
+            Assert.AreEqual(triangle.GetArea(), 6);
+            //WOW add examination RECTANGLE IS IsRectengular WOW
+            Assert.IsTrue(triangle.IsRectengular());
         }
     }
 }

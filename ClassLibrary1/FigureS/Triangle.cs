@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FindArea.FigureS.Interfaces;
+using System;
+
 
 namespace FindArea.FigureS
 {
-    public class Triangle : IArea, IDisposable 
+    public class Triangle : IDisposable, Iarea_IisRectengular
     {
         private double _a;
         private double _b;
@@ -61,10 +59,9 @@ namespace FindArea.FigureS
 
         public bool IsRectengular()
         {
-            /*
-             If performed Pifagor teorem: 
-             с²=a²+b² , where c - max side, а and b the two other, – triangle is rectangular. 
-             */
+            //If performed Pifagor teorem: 
+            // с²= a²+b² , where c -max side, а and b the two other, – triangle is rectangular.
+
             double mx;
             //Find max side
             mx = _a;

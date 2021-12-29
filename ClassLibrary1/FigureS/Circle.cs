@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
+using FindArea.FigureS.Interfaces;
 
 namespace FindArea.FigureS
 {
-
-    public class Circle : IArea, IDisposable
+    public class Circle : IDisposable, Iarea_IisRectengular
     {
         private double _value;
 
@@ -46,6 +41,11 @@ namespace FindArea.FigureS
         public double GetArea()
         {
             return (_value * _value * Math.PI);
+        }
+
+        public bool IsRectengular()
+        {
+            throw new NotImplementedException();
         }
     }
 }
