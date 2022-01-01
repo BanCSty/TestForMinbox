@@ -4,7 +4,7 @@ using System;
 
 namespace FindArea.FigureS
 {
-    public class Triangle : IDisposable, Iarea_IisRectengular
+    public class Triangle : IDisposable, IsRectengular
     {
         private double _a;
         private double _b;

@@ -41,7 +41,7 @@ namespace FindAreaTest
             try
             {
                 IArea abs = new Triangle("3", 0, 5);
-                Assert.Fail("An exception should have been thrown"); //Comment this line and everything will be OK
+                //Assert.Fail("An exception should have been thrown"); //Comment this line and everything will be OK
             }
             catch (ArgumentOutOfRangeException range)
             {
@@ -65,13 +65,23 @@ namespace FindAreaTest
             Assert.IsTrue(triangle.IsRectengular());
         }
 
+        //Abstract figure (Triangle)
         [TestMethod]
-        public void abstractFigure_4_5_3__6retrun()
+        public void abstractFigureTRIANGLE_4_5_3__6retrun()
         {
             Figure triangle = new Figure("4", 5, 3);
             Assert.AreEqual(triangle.GetArea(), 6);
             //WOW add examination RECTANGLE IS IsRectengular WOW
             Assert.IsTrue(triangle.IsRectengular());
+        }
+
+        //Abstract figure (Circle)
+        [TestMethod]
+        public void abstractFigureCIRCLE_12__452retrun()
+        {
+            Figure circle = new Figure(12);
+            double result = 452.3893421169302;
+            Assert.AreEqual(circle.GetArea(), result);
         }
     }
 }

@@ -3,7 +3,7 @@ using FindArea.FigureS.Interfaces;
 
 namespace FindArea.FigureS
 {
-    class Square : IDisposable, Iarea_IisRectengular
+    class Square : IDisposable, IArea
     {
         private double _a;
         private double _b;
@@ -54,11 +54,6 @@ namespace FindArea.FigureS
         public double GetArea()
         {
             return _a * _b;
-        }
-
-        public bool IsRectengular()
-        {
-            throw new NotImplementedException();
         }
     }
 }
