@@ -8,7 +8,7 @@
  */
 namespace FindArea.FigureS.Interfaces
 {
-    //Только в текущей DLL
+    //Only this DLL
     internal interface IExtensionInterface : IArea, IsRectengular
     {
     }

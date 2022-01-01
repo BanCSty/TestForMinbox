@@ -4,28 +4,32 @@ using FindArea.FigureS.Interfaces;
 namespace FindArea.FigureS
 {
     //Class-interface for the find [area] abstract-figure 
-    public class Figure : IDisposable, Iarea_IisRectengular
+    public class Figure : IDisposable,  IExtensionInterface
     {
-        //Aggregation... Solution/Solution items/Extended.txt
-        Iarea_IisRectengular test;
+        //Since not all shapes can be rectangular, I made three interfaces
+        //IArea - for calculating the area of ​​shapes
+        //IsRectengular - is a triangle right-angled
+        //IExtensionInterface - an intermediary interface providing common functionality from other interfaces
+        IArea iarea;
+        IsRectengular isrec;
 
         //Circle
         public Figure(double a)
         {
-            test = new Circle(a);           
+            iarea = new Circle(a);           
         }
         //Triangle
         public Figure(string a, double b, double c)
         {
-            test = new Triangle(a, b, c);
-            
+            isrec = new Triangle(a, b, c);
+            iarea = isrec;        
         }
         // Square
         public Figure(double a, double b)
         {
             if (a == b)
             {
-                test = new Square(a, b);
+                iarea = new Square(a, b);
             }
             //You can complicate the implementation
             else throw new ArgumentException("Это не квадрат"); 
@@ -39,12 +43,13 @@ namespace FindArea.FigureS
 
         public double GetArea()
         {
-            return test.GetArea();
+            //return test.GetArea();
+            return iarea.GetArea();
         }
 
         public bool IsRectengular()
         {
-            return test.IsRectengular();
+            return isrec.IsRectengular();
         }
     }
 }

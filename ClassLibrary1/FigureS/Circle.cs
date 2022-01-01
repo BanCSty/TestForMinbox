@@ -3,7 +3,7 @@ using FindArea.FigureS.Interfaces;
 
 namespace FindArea.FigureS
 {
-    public class Circle : IDisposable, Iarea_IisRectengular
+    public class Circle : IDisposable, IArea
     {
         private double _value;
 
@@ -41,11 +41,6 @@ namespace FindArea.FigureS
         public double GetArea()
         {
             return (_value * _value * Math.PI);
-        }
-
-        public bool IsRectengular()
-        {
-            throw new NotImplementedException();
         }
     }
 }
