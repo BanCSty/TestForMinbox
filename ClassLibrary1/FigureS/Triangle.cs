@@ -21,11 +21,11 @@ namespace FindArea.FigureS
             }
             catch (ArgumentOutOfRangeException)
             {
-                Console.WriteLine("Значение должно быть больше нуля");
+                Console.WriteLine("Value must be more than zero");
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Ошибка: {e.Message}");
+                Console.WriteLine($"Error: {e.Message}");
             }
         }
 

@@ -43,7 +43,6 @@ namespace FindArea.FigureS
 
         public double GetArea()
         {
-            //return test.GetArea();
             return iarea.GetArea();
         }
 
